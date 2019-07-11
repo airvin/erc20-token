@@ -17,6 +17,18 @@ module.exports = {
       network_id: 42,
       gas: 3000000,
       gasPrice: 10000000000
+    },
+    rinkeby: {
+      provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://rinkeby.infura.io/v3/" + process.env.INFURA_API_KEY),
+      network_id: 4,
+      gas: 3000000,
+      gasPrice: 10000000000
+    },
+    mainnet: {
+      provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://mainnet.infura.io/v3/" + process.env.INFURA_API_KEY),
+      network_id: 1,
+      gas: 3000000,
+      gasPrice: 10000000000
     }
   }
 };
